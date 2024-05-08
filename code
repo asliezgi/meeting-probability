@@ -1,0 +1,27 @@
+from fractions import Fraction
+n=int(input("kişi sayısını giriniz"))
+wlistesi=[]
+pilistesi=[]
+deltalistesi=[]
+pi=1
+delta=0
+a=0
+sigmalistesi=[]
+for i in range(1,n+1):
+  w=float(input("bekleme zamanı giriniz"))
+  wlistesi.append(w)
+  pi=pi*w
+  pilistesi.append(pi)
+
+for i in range(1,n+1):
+  delta=delta+(1/wlistesi[i-1])
+  deltalistesi.append(int(delta))
+  sigma=deltalistesi[i-1]*pilistesi[i-1]
+  sigmalistesi.append(sigma)
+wlistesi.append(1)
+
+print(wlistesi)
+for j in range(1,n+1):
+  a=a+((((wlistesi[j]**(n-j+1)))-(wlistesi[j-1]**(n-j+1)))*sigmalistesi[j-1])/(n-j+1)
+
+print(Fraction(a+pi))
