@@ -1,5 +1,5 @@
 from fractions import Fraction
-n=int(input("kişi sayısını giriniz"))
+n=int(input("enter the number of objects"))
 wlistesi=[]
 pilistesi=[]
 deltalistesi=[]
@@ -8,7 +8,7 @@ delta=0
 a=0
 sigmalistesi=[]
 for i in range(1,n+1):
-  w=float(input("bekleme zamanı giriniz"))
+  w=float(input("enter the ratio of waiting time to the entire time interval"))
   wlistesi.append(w)
   pi=pi*w
   pilistesi.append(pi)
